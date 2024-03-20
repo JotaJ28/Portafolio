@@ -146,7 +146,7 @@ p, li {
 
 @media (min-width: 1140px) {
     .perfilLaboral {
-        height: 40rem;
+        height: 45rem;
     }
 }
 
@@ -167,6 +167,11 @@ p, li {
 
 .perfilLaboral a:hover {
     background-color: #2B3B45;
+}
+
+.tituloPerfil
+{
+    font-size: 4rem;
 }
 
 .tituloPerfil::after {
@@ -259,6 +264,7 @@ p, li {
     text-align: center;
     margin: 0;
     margin-bottom: 7rem;
+    font-size: 4rem;
 }
 
 .tituloPortafolio::after {
@@ -277,6 +283,10 @@ p, li {
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+    background-color: #2B3B45;
+    width: 80%;
+    margin: 2rem auto;
+    border-radius: 2rem;
 }
 
 .portafolio div:last-of-type
@@ -287,12 +297,12 @@ margin-bottom: 0;
 @media (min-width: 992px) {
     .cardPortafolio {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1fr;
     }   
 }
 
 .cardPortafolio img {
-    width: 35rem;
+    width: 40rem;
     height: 20rem;
     margin: 0 auto;
 }
@@ -304,7 +314,8 @@ margin-bottom: 0;
 @media (min-width: 992px) {
     .cardPortafolio p {
         padding: 0 10rem 0 0;
-        text-align: unset;
+        font-size: 2.4rem;
+        font-weight: 600;
     }  
 }
 
