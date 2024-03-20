@@ -1,0 +1,361 @@
+:root {
+    --primary: #0091ca;
+    --secundario: #0077ff;
+    --terciario: #2B3B45;
+    --negro: #262626;
+    --blanco: #FFF;
+    --grisClaro: #C3CDDF; 
+    --fuentePrincipal: 'Raleway', sans-serif;
+    --fuenteSecundaria: 'Prompt', sans-serif;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    scroll-behavior: smooth;
+    background-color: var(--blanco);
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+h1,
+h2,
+h3 {
+    font-family: var(--fuenteSecundaria);
+    color: var(--blanco);
+}
+p, li {
+    color: var(--blanco);
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.header {
+    background-color: var(--terciario);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        align-items: unset;
+    }
+}
+
+.perfil img {
+    width: 15rem;
+    height: 20rem;
+    margin: 2rem 5rem;
+}
+
+@media (min-width: 768px) {
+    .perfil img {
+        box-shadow: -52px 45px 0px -27px #ffffff;
+        -webkit-box-shadow: -52px 45px 0px -27px #ffffff;
+        -moz-box-shadow: -52px 45px 0px -27px #ffffff;
+    }
+}
+
+.nombre h1 {
+    border-bottom: 1px var(--secundario) solid;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .nombre h1 {
+        text-align: unset;
+    }
+}
+
+.nombre p {
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .nombre p {
+        text-align: unset;
+    }
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .contacto {
+        align-items: flex-start;
+    }
+}
+
+.contactoCard {
+    display: flex;
+    align-items: center;
+}
+
+.contactoCard svg{
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1.2rem 0 1.2rem;
+}
+
+.contactoCard a
+{
+    color: var(--blanco);
+    text-decoration: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    transition: color;
+    transition-duration: 300ms;   
+}
+
+.contactoCard a:hover
+{
+    color: #0077ff;
+}
+
+.perfilLaboral {
+    background-color: var(--negro);
+    padding: 2rem;
+    text-align: center;
+    height: 80rem;
+    line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+    .perfilLaboral {
+        height: 54rem;
+    }
+}
+
+@media (min-width: 1140px) {
+    .perfilLaboral {
+        height: 40rem;
+    }
+}
+
+.perfilLaboral p {
+    margin-bottom: 6rem;
+}
+
+.perfilLaboral a {
+    text-decoration: none;
+    background-color: var(--secundario);
+    padding: 2rem;
+    text-transform: uppercase;
+    color: var(--blanco);
+    font-weight: 700;
+    transition: background-color;
+    transition-duration: 300ms;
+}
+
+.perfilLaboral a:hover {
+    background-color: #2B3B45;
+}
+
+.tituloPerfil::after {
+    content: '';
+    display: block;
+    width: 20rem;
+    height: 5rem;
+    border-bottom: 3px solid var(--secundario);
+    margin: 0 auto;
+    margin-top: -4rem;
+}
+
+.datosInteres {
+    display: flex;
+    flex-direction: column;
+    margin-top: -5rem;
+    line-height: 2;
+}
+
+@media (min-width: 992px) {
+    .datosInteres {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: .4rem;
+    }
+
+    .datosInteres div:nth-child(3) {
+        grid-column: 1 / 3;
+    }
+}
+
+.datosInteres div:nth-child(1) {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.datosInteres div:nth-child(2) {
+    border-top-right-radius: 0;
+}
+.datosInteres div:nth-child(3) {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+@media (min-width: 992px) {
+    .datosInteres div:nth-child(1) {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 0rem;
+    }
+    .datosInteres div:nth-child(2) {
+        border-top-right-radius: 1rem;
+    }
+}
+
+.cardDatosInteres {
+    padding: 2rem;
+    border: 1px solid #227c9d49;
+    background-color: var(--blanco);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.45);
+}
+
+.cardDatosInteres h2,
+.cardDatosInteres p,
+.cardDatosInteres li  {
+    color: var(--negro);
+}
+
+.cardDatosInteres h2,
+.cardDatosInteres p {
+    text-align: center;
+}
+
+
+.portafolio {
+    background-color: var(--negro);
+    margin-top: -5rem;
+    padding-bottom: 2rem;
+}
+@media (min-width: 992px) {
+    .portafolio {
+        box-shadow: 2px 3px 16px 1px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 2px 3px 16px 1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 2px 3px 16px 1px rgba(0,0,0,0.75);
+    }
+}
+
+.tituloPortafolio {
+    padding-top: 12rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 7rem;
+}
+
+.tituloPortafolio::after {
+    content: '';
+    display: block;
+    width: 20rem;
+    height: 5rem;
+    border-bottom: 3px solid var(--secundario);
+    margin: 0 auto;
+    margin-top: -4rem;
+}
+
+.cardPortafolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.portafolio div:last-of-type
+{
+margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+    .cardPortafolio {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }   
+}
+
+.cardPortafolio img {
+    width: 35rem;
+    height: 20rem;
+    margin: 0 auto;
+}
+
+.cardPortafolio p {
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .cardPortafolio p {
+        padding: 0 10rem 0 0;
+        text-align: unset;
+    }  
+}
+
+.footer {
+    background-color: var(--terciario);
+}
+
+.contactoFooter {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .contactoFooter {
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+}
+
+.contactoCardFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.contactoCardFooter a
+{
+    color: var(--blanco);
+    text-decoration: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    transition: color;
+    transition-duration: 300ms; 
+}
+
+.contactoCardFooter a:hover
+{
+color: #0077ff;
+}
+
+
+.contactoCardFooter svg {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1.2rem 0 1.2rem;
+}
+
+.copyright {
+    margin: 0;
+    text-align: center;
+    border-top: 1px solid var(--secundario);
+    padding: 2rem;
+    line-height: 2;
+}
